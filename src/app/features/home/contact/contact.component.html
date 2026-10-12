@@ -1,0 +1,42 @@
+<section class="section section--alt" id="contact">
+  <div class="container">
+    <div class="section__header">
+      <span class="section__label">Contact</span>
+      <h2 class="section__title">Let's Connect</h2>
+      <p class="section__subtitle">
+        Open to software developer roles, freelance projects, and technical collaborations.
+      </p>
+    </div>
+
+    <div class="contact__grid">
+      <article class="contact__card">
+        <span class="contact__label">Email</span>
+        <a [href]="'mailto:' + profile.email">{{ profile.email }}</a>
+      </article>
+
+      <article class="contact__card">
+        <span class="contact__label">Phone</span>
+        <a [href]="phoneHref()">{{ profile.phone }}</a>
+      </article>
+
+      <article class="contact__card">
+        <span class="contact__label">LinkedIn</span>
+        <a [href]="profile.linkedIn" target="_blank" rel="noopener noreferrer">
+          mahjabeen-siddiqui
+        </a>
+      </article>
+
+      <article class="contact__card">
+        <span class="contact__label">GitHub</span>
+        <a [href]="profile.gitHub" target="_blank" rel="noopener noreferrer">
+          siddiquimaha
+        </a>
+      </article>
+    </div>
+
+    <p class="contact__note">
+      For HR and recruitment teams: employment history and credentials match my submitted CV.
+      Formal references are available upon request.
+    </p>
+  </div>
+</section>

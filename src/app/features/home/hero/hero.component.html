@@ -1,0 +1,36 @@
+<section class="hero" id="top">
+  <div class="container hero__grid">
+    <div class="hero__content">
+      <p class="hero__eyebrow">Available for full-time & contract roles</p>
+      <h1 class="hero__title">{{ profile.name }}</h1>
+      <p class="hero__role">{{ profile.title }}</p>
+      <p class="hero__summary">{{ profile.summary }}</p>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#experience">View Experience</a>
+        <a class="btn btn--secondary" [href]="'mailto:' + profile.email">Contact Me</a>
+      </div>
+
+      <div class="hero__meta">
+        @if (profile.location) {
+          <span>{{ profile.location }}</span>
+        }
+        <span>Open to remote & on-site opportunities</span>
+      </div>
+    </div>
+
+    <aside class="hero__card">
+      <h2>Quick Profile</h2>
+      <ul>
+        <li><strong>Focus:</strong> ASP.NET Core · Angular · SQL Server</li>
+        <li><strong>Strengths:</strong> Clean Architecture, Secure APIs, Performance</li>
+        <li><strong>Domains:</strong> Fintech, Enterprise, Geospatial</li>
+        <li><strong>Education:</strong> MS Software Engineering (In Progress)</li>
+      </ul>
+      <div class="hero__card-links">
+        <a [href]="profile.linkedIn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a [href]="profile.gitHub" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </aside>
+  </div>
+</section>

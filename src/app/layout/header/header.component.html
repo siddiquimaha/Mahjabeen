@@ -1,0 +1,35 @@
+<header class="header">
+  <div class="container header__inner">
+    <a class="header__brand" href="#" (click)="closeMenu()">
+      <span class="header__brand-mark">MS</span>
+      <span class="header__brand-text">{{ data.profile.name }}</span>
+    </a>
+
+    <button
+      class="header__toggle"
+      type="button"
+      [attr.aria-expanded]="menuOpen"
+      aria-label="Toggle navigation menu"
+      (click)="toggleMenu()"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="header__nav" [class.header__nav--open]="menuOpen">
+      @for (link of data.navLinks; track link.fragment) {
+        <a class="header__link" [href]="'#' + link.fragment" (click)="closeMenu()">
+          {{ link.label }}
+        </a>
+      }
+      <a
+        class="header__cta"
+        [href]="'mailto:' + data.profile.email"
+        (click)="closeMenu()"
+      >
+        Hire Me
+      </a>
+    </nav>
+  </div>
+</header>

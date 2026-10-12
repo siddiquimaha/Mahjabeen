@@ -1,0 +1,46 @@
+<section class="section section--alt" id="projects">
+  <div class="container">
+    <div class="section__header">
+      <span class="section__label">Projects</span>
+      <h2 class="section__title">Selected Work</h2>
+      <p class="section__subtitle">
+        Public and portfolio-safe project summaries suitable for interviews and client discussions.
+      </p>
+    </div>
+
+    <div class="projects__grid">
+      @for (project of projects; track project.name) {
+        <article class="projects__card">
+          <div class="projects__top">
+            <h3>{{ project.name }}</h3>
+            <span
+              class="projects__status"
+              [class.projects__status--active]="project.status === 'In Progress'"
+            >
+              {{ project.status }}
+            </span>
+          </div>
+
+          <p class="projects__desc">{{ project.description }}</p>
+
+          <div class="projects__tags">
+            @for (tech of project.technologies; track tech) {
+              <span>{{ tech }}</span>
+            }
+          </div>
+
+          @if (project.url) {
+            <a
+              class="projects__link"
+              [href]="project.url"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Live Project →
+            </a>
+          }
+        </article>
+      }
+    </div>
+  </div>
+</section>

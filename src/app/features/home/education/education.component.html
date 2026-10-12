@@ -1,0 +1,46 @@
+<section class="section" id="education">
+  <div class="container">
+    <div class="section__header">
+      <span class="section__label">Education & Certifications</span>
+      <h2 class="section__title">Academic & Professional Development</h2>
+    </div>
+
+    <div class="education__grid">
+      <div>
+        <h3 class="education__heading">Education</h3>
+        <div class="education__list">
+          @for (item of data.education; track item.degree) {
+            <article class="education__item">
+              <div class="education__item-top">
+                <h4>{{ item.degree }}</h4>
+                @if (item.status) {
+                  <span class="education__badge">{{ item.status }}</span>
+                }
+              </div>
+              <p>{{ item.institution }}</p>
+              <span class="education__year">{{ item.year }}</span>
+            </article>
+          }
+        </div>
+      </div>
+
+      <div>
+        <h3 class="education__heading">Certifications</h3>
+        <div class="education__list">
+          @for (cert of data.certifications; track cert.name) {
+            <article class="education__item">
+              <div class="education__item-top">
+                <h4>{{ cert.name }}</h4>
+                @if (cert.status) {
+                  <span class="education__badge">{{ cert.status }}</span>
+                }
+              </div>
+              <p>{{ cert.issuer }}</p>
+              <span class="education__year">{{ cert.year }}</span>
+            </article>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

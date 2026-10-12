@@ -1,0 +1,24 @@
+<section class="section section--alt" id="skills">
+  <div class="container">
+    <div class="section__header">
+      <span class="section__label">Skills</span>
+      <h2 class="section__title">Technical Expertise</h2>
+      <p class="section__subtitle">
+        Aligned with my CV — focused on production-ready .NET and modern frontend development.
+      </p>
+    </div>
+
+    <div class="skills__grid">
+      @for (group of skills; track group.category) {
+        <article class="skills__card">
+          <h3>{{ group.category }}</h3>
+          <div class="skills__tags">
+            @for (skill of group.skills; track skill) {
+              <span class="skills__tag">{{ skill }}</span>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
