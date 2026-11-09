@@ -7,7 +7,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
     summary:
       'Adaptable and detail-oriented software developer with hands-on experience building secure, scalable web applications using ASP.NET Core and Angular. Passionate about clean architecture, continuous learning, and delivering reliable solutions across fintech, enterprise, and geospatial domains.',
     email: 'Siddiqui.mahajabeen@gmail.com',
-    phone: '+92 332 2392917',
+    phone: '+92 335 1310099',
     linkedIn: 'https://www.linkedin.com/in/mahjabeen-siddiqui-126a4734/',
     gitHub: 'https://github.com/siddiquimaha',
     location: 'Karachi, Pakistan',
